@@ -1,0 +1,133 @@
+*{
+    background-color: #965940;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    z-index: 1;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    color: white;
+    margin-bottom: 50px;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.heading{
+    text-align: center;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.head-1 span{
+    color: white;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
+.number{
+    color: white;
+    background-color:rgb(72, 72, 71);
+}
+
+ul li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+ul li p{
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+ul li .icon{
+    font-size: 35px;
+    margin: 0 32px;
+    color: white;
+
+}
+ul li .progress{
+    
+    margin: 12px 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(72, 72, 71);
+    display: grid;
+    place-content: center;
+    position: relative;
+}
+.progress::after{
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 5px;
+    background-color: rgb(72, 72, 71);
+    top: 13px;
+    right: 30px;
+}
+ul li .progress .uil{
+    display: none;
+}
+.one::after{
+    width: 0;
+    height: 0;
+}
+ ul li .active{
+    background-color: white;
+}
+
+li .active::after{
+    background-color: white;
+}
+ul li .active p{
+    display: none;
+    
+}
+ul li .active .uil{
+    display:block;
+    color: #965940;
+    background-color: white ;
+    font-size: 25px;
+    border-radius:40%;
+    font-weight: bold;
+}
+
+@media (max-width: 1300px) {
+    .main{
+        height: auto;
+    }
+    ul{
+        flex-direction: column;
+        place-content: center;
+    }
+    ul li{
+        flex-direction: row;
+        margin: 25px 0;
+        cursor: pointer;
+        
+    }
+    .progress::after{
+        width: 5px;
+        height: 81px;
+        left: 15px;
+        top: -80px;
+        transform: translateX(-50%);
+        
+    }
+    .one::after{
+        width: 0;
+        height: 0;
+    }
+}
+
